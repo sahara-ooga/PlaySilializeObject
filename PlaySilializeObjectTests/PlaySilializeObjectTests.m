@@ -24,16 +24,27 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+-(void)testSaveAndLoad{
+    NSArray* before = @[@"山田太郎", @"東京都中央区"];
+    //オブジェクトのアーカイブ（バイナリ化）
+    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:before];
+    //オブジェクトのアンアーカイブ(元に戻す）
+    NSArray *after = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    XCTAssertEqualObjects(before, after);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)testLoadFile{
+    NSArray* before = @[@"山田太郎", @"東京都中央区"];
+    NSString* documentsDirectoryPathString = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString* filePath = [documentsDirectoryPathString stringByAppendingPathComponent:@"data.dat"];
+    BOOL successful =[NSKeyedArchiver archiveRootObject:before
+                                                 toFile:filePath];
+    XCTAssertTrue(successful);
+    
+    NSArray* after = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    
+    XCTAssertEqualObjects(before, after);
 }
 
 @end
