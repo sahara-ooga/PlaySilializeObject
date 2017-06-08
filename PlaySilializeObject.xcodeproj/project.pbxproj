@@ -14,6 +14,10 @@
 		1F6C1B661EE9222A0072A73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C1B651EE9222A0072A73D /* Assets.xcassets */; };
 		1F6C1B691EE9222A0072A73D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C1B671EE9222A0072A73D /* LaunchScreen.storyboard */; };
 		1F6C1B741EE9222A0072A73D /* PlaySilializeObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C1B731EE9222A0072A73D /* PlaySilializeObjectTests.m */; };
+		1F6C1B801EE92A480072A73D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C1B7F1EE92A480072A73D /* Person.m */; };
+		1F6C1B811EE92A480072A73D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C1B7F1EE92A480072A73D /* Person.m */; };
+		1F6C1B851EE92A900072A73D /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C1B841EE92A900072A73D /* Address.m */; };
+		1F6C1B861EE92A900072A73D /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C1B841EE92A900072A73D /* Address.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		1F6C1B6F1EE9222A0072A73D /* PlaySilializeObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaySilializeObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6C1B731EE9222A0072A73D /* PlaySilializeObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaySilializeObjectTests.m; sourceTree = "<group>"; };
 		1F6C1B751EE9222A0072A73D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F6C1B7E1EE92A480072A73D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = Models/Person.h; sourceTree = "<group>"; };
+		1F6C1B7F1EE92A480072A73D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = Models/Person.m; sourceTree = "<group>"; };
+		1F6C1B831EE92A900072A73D /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Address.h; path = Models/Address.h; sourceTree = "<group>"; };
+		1F6C1B841EE92A900072A73D /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Address.m; path = Models/Address.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		1F6C1B581EE9222A0072A73D /* PlaySilializeObject */ = {
 			isa = PBXGroup;
 			children = (
+				1F6C1B821EE92A550072A73D /* Models */,
 				1F6C1B5C1EE9222A0072A73D /* AppDelegate.h */,
 				1F6C1B5D1EE9222A0072A73D /* AppDelegate.m */,
 				1F6C1B5F1EE9222A0072A73D /* ViewController.h */,
@@ -109,6 +118,17 @@
 				1F6C1B751EE9222A0072A73D /* Info.plist */,
 			);
 			path = PlaySilializeObjectTests;
+			sourceTree = "<group>";
+		};
+		1F6C1B821EE92A550072A73D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F6C1B7E1EE92A480072A73D /* Person.h */,
+				1F6C1B7F1EE92A480072A73D /* Person.m */,
+				1F6C1B831EE92A900072A73D /* Address.h */,
+				1F6C1B841EE92A900072A73D /* Address.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +237,8 @@
 			files = (
 				1F6C1B611EE9222A0072A73D /* ViewController.m in Sources */,
 				1F6C1B5E1EE9222A0072A73D /* AppDelegate.m in Sources */,
+				1F6C1B801EE92A480072A73D /* Person.m in Sources */,
+				1F6C1B851EE92A900072A73D /* Address.m in Sources */,
 				1F6C1B5B1EE9222A0072A73D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6C1B861EE92A900072A73D /* Address.m in Sources */,
+				1F6C1B811EE92A480072A73D /* Person.m in Sources */,
 				1F6C1B741EE9222A0072A73D /* PlaySilializeObjectTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
