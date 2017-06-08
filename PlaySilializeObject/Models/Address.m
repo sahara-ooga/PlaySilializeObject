@@ -22,7 +22,7 @@
 }
 
 -(void)encodeWithCoder:(NSCoder *)aCoder{
-    [aCoder encodeObject:self.zipCode forKey:@"name"];
+    [aCoder encodeObject:self.zipCode forKey:@"zipCode"];
     [aCoder encodeObject:self.state forKey:@"state"];
     [aCoder encodeObject:self.city forKey:@"city"];
     [aCoder encodeObject:self.other forKey:@"other"];
